@@ -38,3 +38,8 @@ select distinct deptno from emp;
 select ename, job, sal, e.deptno, dname, loc 
 	from emp e  right outer join dept d 
 	on e.deptno = d.deptno;
+-- 회사에서 급여를 가장 많이 받는 사람의 이름과 급여
+select ename, sal from emp where sal = max(sal);
+select max(sal) from emp;
+-- 먼저 실행할 문장을 괄호에 넣어서 실행 sub query
+select ename, sal from emp where sal=(select max(sal) from emp);
