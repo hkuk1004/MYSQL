@@ -102,6 +102,8 @@ begin
 end //
 delimiter ;
 
+select * from warehouse;
+
 delimiter //
 create trigger wh_update
 	after update on warehouse for each row
@@ -109,3 +111,6 @@ begin
 	update product set stock = stock - old.qty + new.qty where pno=old.pno;
 end //
 delimiter ;
+
+update warehouse set qty = 7 where num = 3;
+
