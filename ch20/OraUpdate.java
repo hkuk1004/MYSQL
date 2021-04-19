@@ -19,9 +19,9 @@ public class OraUpdate {
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url,"scott","tiger");
 			pstmt = conn.prepareStatement(sql);// 여기서 sql
-			pstmt.setInt(1, deptno); // 첫번 째 ? 에는 deptno
-			pstmt.setString(2, dname); // 두번 쨰 ? 에는 dname
-			pstmt.setString(3, loc); // 세번 째 ? 에는 loc
+			pstmt.setInt(3, deptno); // 세번 째 ? 에는 deptno
+			pstmt.setString(1, dname); // 첫번 째 ? 에는 dname
+			pstmt.setString(2, loc); // 두번 째 ? 에는 loc
 			int result = pstmt.executeUpdate(); // 여기는 sql이 없음
 			if(result > 0) System.out.println("수정 성공!!");
 			else System.out.println("수정 실패ㅠㅠ");

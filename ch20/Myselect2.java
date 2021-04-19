@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Myselect2 {
 	public static void main(String[] args) throws SQLException {
 		String driver = "com.mysql.cj.jdbc.Driver";
-		String url = "jdbc:mysql://127.0.0.1:3306/test?useSSL=false&serverTimezone=UTC";
+		String url = "jdbc:mysql://127.0.0.1:3306/test?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
